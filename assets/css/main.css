@@ -1213,7 +1213,7 @@ input[type="button"]:focus {
 }
 
 .work__list-el {
-    display: inherit
+    display: none
 }
 
 .work__list-el--is-active {
