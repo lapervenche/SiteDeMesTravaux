@@ -1202,7 +1202,7 @@ input[type="button"]:focus {
     padding: 60px 0
 }
 
-/*.work__list::before {
+.work__list::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1210,10 +1210,10 @@ input[type="button"]:focus {
     right: 125px;
     bottom: 0;
     border: 10px solid #2046f2
-}*/
+}
 
 .work__list-el {
-    display: none
+    display: inherit
 }
 
 .work__list-el--is-active {
