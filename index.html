@@ -1,30 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo1.png">
+    <title>Site De MesTravaux Github</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteDeMesTravaux</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/logo1.png">
-    
   <meta name="description" content="Je présente ici tout mes travaux réalisés sur mon compte Github ">
   <meta name="keywords" content="travaux free html template, portfolio, html5, sass, jquery Github">
   <meta name="author" content="lechti64r">
-  <link rel="stylesheet" href="assets/css/main.css">
   <!-- https://icons.getbootstrap.com -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+<style>
+	body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 20px;
+	padding: 20px;
+}
+   .lien {
+        text-decoration: none;
+        color: blue;
+        font-size: 16px;
+        font-weight: bold;
+        }
+footer {
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0 20px;
+	border-radius: 40px;
+	box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+        
+nav ul {
+	margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+	padding: 0 20px;
+	border-radius: 40px;
+	box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+	list-style: none;
+	padding: 0;
+	 margin: 0; }
+nav ul li { 
+	display: inline-block; 
+	position: relative;
+	margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	 }
+nav ul li a { 
+	display: block; 
+	padding: 10px; 
+	text-decoration: none; 
+	color: #333;
+ }
+nav ul ul { 
+	display: none; 
+	position: absolute;
+	background-color: #f5f6f7;
+	border: 1px solid;
+	 }
+nav ul li:hover > ul { display: block; }
+</style>
 </head>
 <body>
-    <header>
 <!-- SECTION: Navigation -->
-        <nav>
-                <a href="#Accueil" class="nav-item is-active">Accueil</a>
-                <a href="#Services" class="nav-item">Services</a>
-
-        </nav>
-    </header>
+<nav class="nav">
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#1">Mes réalisations</a>
+        </li>
+        <li><a href="#">Tester en live</a>
+            <ul>
+                <li style="text-align: center;width: 200px;"><a href="editeur.html" target="_blank">Editeur en live</a></li>
+<hr>
+                <li style="text-align: center;width: 200px;"><a href="#">Produit 2</a></li>
+            </ul>
+        </li>
+        <li><a href="https://github.com/lapervenche"target="_blank"">Mes repos Github</a></li>
+    </ul>
+</nav>
 <!-- SECTION: corps du site -->
 <main>
         <h1>Bienvenue sur Site de mes travaux réalisés</h1>
@@ -33,14 +95,16 @@
     <p>Explorez mes projets pour voir mon travail et mes compétences.</p>
     <p>Mes créations sont le reflet de ma passion pour l'art, l'information, l'informatique et l'innovation.</>
     <p>J'espère qu'elles sauront vous inspirer et vous séduire.</p>     
-        <section id="Services" class="">
+        <section id="1" class="">
 					<li class="">
 						<div class="">
 							<div class="">
 								<h3 class="">1 Editeur-d-image</h3>
 								<p class="">Un site Web/outil de pc d'éditeur de photos léger.</p>
 							</div>
-							<a class="lien" href="https://github.com/lapervenche/Editeur-d-image">Voir ce projet</a>
+							<a class="lien" href="https://github.com/lapervenche/Editeur-d-image">Voir ce projet sur Github <img src="images/github.png" alt="Strategik INC">
+						</a>
+							<br>
 						</div>
 						<div>
 							<img src="assets/img/Editeur-image.png" alt="Strategik INC" style="min-width: 120px !important;max-width: 800px !important;width: 100% !important;">
@@ -52,7 +116,7 @@
 								<h3 class="">2 Editeur-d-image</h3>
 								<p class="">Un site Web/outil de pc d'éditeur de photos léger.</p>
 							</div>
-							<a class="lien" href="#0">Voir ce projet</a>
+							<a class="lien" href="#0">Voir ce projet sur Github </a>
 						</div>
 						<div>
 							<img src="assets/img/web-design-visual.png" alt="Strategik INC" style="min-width: 120px !important;max-width: 800px !important;width: 100% !important;">
@@ -64,7 +128,7 @@
 								<h3 class="">3 Editeur-d-image</h3>
 								<p class="">Un site Web/outil de pc d'éditeur de photos léger.</p>
 							</div>
-							<a class="lien" href="#0">Voir ce projet</a>
+							<a class="lien" href="#0">Voir ce projet sur Github</a>
 						</div>
 						<div>
 							<img src="assets/img/app-design-visual.png" alt="Strategik INC" style="min-width: 120px !important;max-width: 800px !important;width: 100% !important;">
@@ -74,14 +138,12 @@
 </main>
 <!-- SECTION: bas de page -->
     <footer>
-        <p>&copy; 2022 Mon site web</p>
+        <p>&copy; 2024 Site De MesTravaux</p>
     </footer>
         <!-- Bouton remonter en haut -->
         <div style="margin-top: 0px;float: right;position: sticky;bottom: 60px;margin-right: -25px;">
           <button onclick="topFunction()" id="myBtn" title="Remonter en haut de la page" style="color: #0d6efd;border-color: #0d6efd;border: 1px solid;border-radius: 5px;width: 40px;height: 40px;background-color: transparent;"><i class="bi bi-arrow-up"></i></button>
         </div>
-    <script src="script.js"></script>
-    
     <script>
         // Renvoie en haut de la page lorsque le bouton est cliqué  
         function topFunction() {
@@ -89,8 +151,8 @@
             document.documentElement.scrollTop = 0; // Pour les autres navigateurs  
         }
     </script>
-    
-    
+<script>
+javascript $(document).ready(function() { $('nav ul li').click(function() { $(this).children('ul').slideToggle(); }); });
+</script>
 </body>
 </html>
-
