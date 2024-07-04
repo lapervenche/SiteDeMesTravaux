@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/x-icon" href="images/logo1.png">
+        <title>Documentation éditeur d'image</title>
+        <!-- http://getbootstrap.com/docs/5/ -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <!-- https://icons.getbootstrap.com -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!-- Fichier CSS personnalisé -->
+        <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+
+        <main>
+            <!-- Comment utiliser la section -->
+            <section id="doc" class="bg-light mt-5">
+                <div class="display-5 text-muted ms-5">Comment utiliser l'éditeur d'image</div>
+                <div class="container-xxl py-3">
+                    <div class="row" id="theight">
+                        <div class="col-md-2 mb-2 mb-md-auto bg-white shadow me-4 py-2" id="tableOfContents">
+                            <p class="fw-bold border-bottom mb-1 fs-5">Table des matières</p>
+                            <ul class="list-unstyled ps-0">
+                                <li class="mb-1">
+                                    <a class="btn btn-toggle-no align-items-center rounded" href="#upload_HTU" aria-expanded="false">
+                                        &nbsp; &nbsp; Envoyer une image
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a class="btn btn-toggle-no align-items-center rounded" href="#controls_HTU" aria-expanded="false">
+                                        &nbsp; &nbsp; Contrôles
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                  <a class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tools-collapse" aria-expanded="false">
+                                    Outils
+                                  </a>
+                                  <div class="collapse" id="tools-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled small">
+                                      <li><a href="#crop_tools_HTU" class="link-dark rounded">Recadrer</a></li>
+                                      <li><a href="#rotate_tools_HTU" class="link-dark rounded">Rotation</a></li>
+                                      <li><a href="#flip_tools_HTU" class="link-dark rounded">Retournement</a></li>
+                                      <li><a href="#text_tools_HTU" class="link-dark rounded">Texte</a></li>
+                                      <li><a href="#watermark_tools_HTU" class="link-dark rounded">Watermark</a></li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li class="mb-1">
+                                    <a class="btn btn-toggle-no align-items-center rounded" href="#filters_HTU" aria-expanded="false">
+                                        &nbsp; &nbsp; Filtres
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a class="btn btn-toggle-no align-items-center rounded" href="#effects_HTU" aria-expanded="false">
+                                        &nbsp; &nbsp; Effets
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a class="btn btn-toggle-no align-items-center rounded" href="#download_HTU" aria-expanded="false">
+                                        &nbsp; &nbsp; Télécharger
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col bg-white shadow py-2 px-4">
+                            <!-- Envoyer l'image | utilisation -->
+                            <div class="fw-bold display-5 mb-2" id="upload_HTU">Envoyer une image</div>
+                            <p class="fs-5">Pour télécharger une image, cliquez sur la toile blanche au milieu de l'éditeur</p>
+                            <div class="callout callout-info">
+                                <p class="fs-6 fw-bold mb-0">Formats supportés:</p>
+                                <ul>
+                                    <li><p class="fs-6">JPG</p></li>
+                                    <li><p class="fs-6">PNG</p></li>
+                                    <li><p class="fs-6">GIF</p></li>
+                                    <li><p class="fs-6">WebP</p></li>
+                                </ul>
+                            </div>
+
+                            <hr class="mx-5">
+
+                            <!-- Contrôles | utilisation -->
+                            <div class="fw-bold display-5 mb-2" id="controls_HTU">Contrôles</div>
+                            <p class="fs-5">Au bas de la section de l'éditeur, il y a 3 boutons:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Revenir</p>
+                                    <p class="fs-6">Cliquez sur ce bouton <button class="btn btn-outline-primary"><i class="bi bi-arrow-counterclockwise"></i></button> pour retourner l'image éditée à son état d'origine<div>
+                                    
+                                </div></p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Zoommer In/Out</p>
+                                    <p class="fs-6">Utilisez ces boutons <button class="btn btn-outline-primary"><i class="bi bi-zoom-out"></i></button><input type="text" size="1" value="50%"><button class="btn btn-outline-primary"><i class="bi bi-zoom-in"></i></button> pour zoomer/dézommer</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Télécharger</p>
+                                    <p class="fs-6">Cliquez sur ce bouton <button class="btn btn-outline-primary"><i class="bi bi-download"></i></button> pour ouvrir le menu de téléchargement</p>
+                                </li>
+                            </ul>
+
+                            <hr class="mx-5">
+
+                            <!-- Outils | utilisation -->
+                            <div class="fw-bold display-5 mb-2">Outils</div>
+                            <div class="my-1"></div>
+
+                            <!-- Recadrage | Outils | utilisation-->
+                            <div class="fw-bold display-6 mb-2" id="crop_tools_HTU">Recadrer</div>
+                            <p class="fs-5">Utilisez cet outil pour recadrer l'image</p>
+                            <p class="fs-5 mb-0">Exigences de l'outil:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Rectangle</p>
+                                    <p class="fs-6">Spécifiez les coordonnées rectangulaires pour recadrer l'image</p>
+                                    <ul>
+                                        <li>
+                                            <p class="fs-6 mb-0">Gauche: la colonne de gauche </p>
+                                        </li>
+                                        <li>
+                                            <p class="fs-6 mb-0">En haut: la ligne supérieure </p>
+                                        </li>
+                                        <li>
+                                            <p class="fs-6 mb-0">Droite: la colonne de droite</p>
+                                        </li>
+                                        <li>
+                                            <p class="fs-6 mb-0">En bas: la rangée inférieure</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="callout callout-info">
+                                <ul>
+                                    <li>Les valeurs gauche et droite ne peuvent pas être supérieures à la largeur d'image</li>
+                                    <li>La valeur droite doit être supérieure à la valeur gauche</li>
+                                    <li>Les valeurs supérieures et inférieures ne peuvent pas être supérieures à la hauteur de l'image</li>
+                                    <li>La valeur inférieure doit être supérieure à la valeur supérieure</li>
+                                </ul>
+                            </div>
+
+                            <!-- Rotation | Outils | utilisation -->
+                            <div class="fw-bold display-6 mb-2" id="rotate_tools_HTU">Rotation</div>
+                            <p class="fs-5">Utilisez cet outil pour faire pivoter l'image</p>
+                            <p class="fs-5 mb-0">Exigences de l'outil:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Angle</p>
+                                    <p class="fs-6">Spécifiez un angle pour faire pivoter l'image</p>
+                                </li>
+                            </ul>
+                            <div class="callout callout-info">
+                                <ul>
+                                    <li>Pour faire pivoter l'image dans le sens horaire, utilisez une valeur négative</li>
+                                    <li>Pour faire pivoter l'image dans le sens horaire, utilisez une valeur positive</li>
+                                </ul>
+                            </div>
+
+                            <!-- Retourner image | Outils | utilisation -->
+                            <div class="fw-bold display-6 mb-2" id="flip_tools_HTU">Retournement</div>
+                            <p class="fs-5">Utilisez cet outil pour retourner l'image</p>
+                            <p class="fs-5 mb-0">Exigences de l'outil:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Axe</p>
+                                    <p class="fs-6">Spécifiez un axe pour retourner l'image sur elle même.</p>
+                                </li>
+                            </ul>
+
+                            <!-- Texte | Outils | utilisation -->
+                            <div class="fw-bold display-6 mb-2" id="text_tools_HTU">Texte</div>
+                            <p class="fs-5">Utilisez cet outil pour ajouter du texte à l'image</p>
+                            <p class="fs-5 mb-0">Exigences de l'outil:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Texte</p>
+                                    <p class="fs-6">Ecrivez dans cette boite le texte que vous souhaitez voir apparître sur votre image.</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Police d'écriture</p>
+                                    <p class="fs-6">Spécifiez une police d'écriture pour votre texte.</p>
+                                    <p class="fs-6">Utilisez le sélecteur de police pour choisir la votre.</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Taille de la police d'écriture</p>
+                                    <p class="fs-6">Spécifiez une taille en pixel (exemple: 18px) pour le texte à afficher.</p>
+                                    <p class="fs-6">Utilisez le sélecteur de taille pour spécifier celle ci.</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Couleur</p>
+                                    <p class="fs-6">Choisissez une couleur pour votre texte.</p>
+                                    <p class="fs-6">Choisir celle qui vous convient en utilisant le sélecteur de choix des couleurs.</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Position</p>
+                                    <p class="fs-6">Choisissez une position pour afficher votre texte dans l'image.</p>
+                                </li>
+                            </ul>
+                            <div class="callout callout-info">
+                                <p class="fs-6 fw-bold mb-0">Polices supportées:</p>
+                                <ul>
+                                    <li>arial</li>
+                                    <li>Comic sans ms</li>
+                                    <li>courier new</li>
+                                    <li>cursive</li>
+                                    <li>just lovely</li>
+                                    <li>monospace</li>
+                                    <li>serif</li>
+                                    <li>times new roman</li>
+                                    <li>ubuntu</li>
+                                    <li>verdana</li>
+                                    <li>Pour plus de polices, visitez ce site <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family" target="_blank">CSS Font-Family</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Watermark | Outils | utilisation -->
+                            <div class="fw-bold display-6 mb-2" id="watermark_tools_HTU">Watermark</div>
+                            <p class="fs-5">Utilisez cet outil pour ajouter un filigrane à l'image</p>
+                            <p class="fs-5 mb-0">Exigences de l'outil:</p>
+                            <ul>
+                                <li>
+                                    <p class="fs-5 mb-0">Watermark Fichier</p>
+                                    <p class="fs-6">Un fichier image du filigrane</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Opacité</p>
+                                    <p class="fs-6">Spécifiez une valeur pour l'opacité du filigrane</p>
+                                </li>
+                                <li>
+                                    <p class="fs-5 mb-0">Position</p>
+                                    <p class="fs-6">Choisissez une position pour le filigrane</p>
+                                </li>
+                            </ul>
+
+                            <hr class="mx-5">
+
+                            <!-- Filtres | utilisation -->
+                            <div class="fw-bold display-5 mb-2" id="filters_HTU">Filtres</div>
+                            <p class="fs-5">Il y a 4 filtres.Qui sont</p>
+                            <ul>
+                                <li>Luminosité</li>
+                                <li>Contraste</li>
+                                <li>Saturation</li>
+                                <li>Teinte</li>
+                            </ul>
+                            <p class="fs-5">Chaque filtre a 2 boutons, un bouton "+" pour augmenter sa valeur et un autre bouton "-" pour la diminuer</p>
+                            
+                            <hr class="mx-5">
+
+                            <!-- Effets | utilisation -->
+                            <div class="fw-bold display-5 mb-2" id="effects_HTU">Effets</div>
+                            <p class="fs-5">Les effets ne sont qu'une combinaison de filtres multiples avec des valeurs spécifiques</p>
+                            <p class="fs-5">Cliquez sur un effet pour l'appliquer</p>
+
+                            <hr class="mx-5">
+
+                            <!-- Téléchargement | utilisation -->
+                            <div class="fw-bold display-5 mb-2" id="download_HTU">Télécharger</div>
+                            <p class="fs-5">Pour ouvrir le menu de téléchargement, cliquez sur le bouton de téléchargement dans le coin inférieur droit de l'éditeur</p>
+                            <p class="fs-5">Après avoir ouvert le menu, spécifiez un "nom de fichier" et un "format de fichier"</p>
+                            <div class="callout callout-info">
+                                <ul>
+                                    <li><p class="my-0">Utilisez "PNG" pour un fond transparent</p></li>
+                                    <li><p class="my-0">Utilisez "JPG" pour une taille de fichier plus petite</p></li>
+                                </ul>
+                            </div>
+                            <p class="fs-5">Puis cliquez sur le bouton de téléchargement <button class="btn btn-outline-primary"><i class="bi bi-download"></i></button></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Back to top -->
+        <div style="margin-top: 0px;float: right;position: sticky;bottom: 60px;margin-right: 25px;">
+          <a href="#" class="btn btn-outline-primary"><i class="bi bi-arrow-up"></i></a>
+        </div>
+        <!-- scripts bas de page -->
+
+        <!-- http://getbootstrap.com/docs/5/ -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <!-- CamanJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
+        <!-- Fichier JS personnalisé-->
+        <script src="static\script.js"></script>
+</body>
+</html>
