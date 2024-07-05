@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Jacob Strieb" />
+  <meta name="description" content="Brute force password-protected links created with Link Lock from within the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+  <title>Forcer une adresse cryptée</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript" src="bruteforce.js"></script>
+</head>
+
+<body>
+  <!-- View on GitHub ribbon -->
+
+
+  <!-- Explanation for those who do not have JavaScript enabled -->
+  <noscript>
+  <div style="border: 3px solid red; padding: 2em;">
+    <p> Si vous voyez cela, cela signifie que JavaScript est désactivé. En conséquence, l'application ne fonctionnera pas correctement pour vous. Par exemple, aucun des boutons ne fonctionnera. </p>
+    <p> Cette application est entièrement programmée en JavaScript. Cela a été fait intentionnellement, de sorte que tout cryptage et décryptage se produisent côté client. Cela signifie que le code s'exécute en tant qu'application distribuée, en s'appuyant uniquement sur les pages GitHub pour l'infrastructure. Cela signifie également qu'aucune donnée sur les liens verrouillés n'est jamais stockée sur un serveur. Le code est conçu pour être vérifiable afin que les utilisateurs puissent étudier ce qui se passe dans les coulisses. </p>
+    <p> Si vous souhaitez toujours exécuter l'application, je vous encourage à cloner le <a href="https://github.com/lapervenche/link-lock/">code source sur GitHub</a>De cette façon, vous pouvez désactiver JavaScript uniquement pour les fichiers de confiance sur votre machine locale.</p>
+  </div>
+  </noscript>
+<div>
+  <!-- Introduction -->
+  <h1> URL de verrouillage de liaison de force brute </h1>
+  <p>"Forcing brute" Forcer un mot de passe est l'acte de le deviner par force brute en essayant littéralement tous les mots de passe jusqu'à ce que cela fonctionne avec des combinaisons de caractères variées si possible.</p>
+  <!-- Main form -->
+  <div class="form" style="padding-bottom: 0px;padding-top: 10px;height: 345px;">
+    <label for="charset">Caractère</label>
+    <input type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+    <label for="encrypted-url">URL cryptée</label>
+    <input type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+<center>
+    <button onclick="onBruteForce()">Forcer le mot de passe</button>
+    <button onclick="history.go(0)">Stopper & Rafraîchir la page </button>
+</center>
+    <br><br>
+    <input type="button" value = "Rafraîchir" onclick="history.go(0)" />
+    <p class="alert">INVISIBLE</p>
+  </div>
+  <br />
+  <!-- Output area -->
+  <div class="output" style="padding-bottom: 0px;padding-top: 10px;height: 80px;">
+    <label for="output">Le mot de passe trouvé est:</label>
+    <input type="text" id="output" />
+  </div>
+
+  <!-- Page footer -->
+  <footer>
+  <b />
+  <p><b>Informations concernant vos données, adresses et mots de passe</b><br>
+  Celles ci ne seront ni enregistrées ni divulguées par notre site.</p>
+  </footer>
+</div>
+</body>
+
+</html>
