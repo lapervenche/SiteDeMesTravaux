@@ -1,0 +1,68 @@
+/* modifications personnelles */
+.form-inline .form-control {
+	display: inline-block!important;
+	width: 100%!important;
+	vertical-align: middle;
+}
+.form-control {
+	display: block;
+	width: 100%!important;
+	height: calc(1.5em + .75rem + 2px);
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #ff8080!important;
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(128, 255, 0, 0.25)!important;
+}
+.table-responsive {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.btn-success-1 {
+	color: #fff;
+	background-color: #828483!important;
+	border-color: #28a745!important;
+	height: auto!important;
+  width: auto!important;
+}
+.btn-success-1:hover {
+	color: #fff;
+	background-color: #1f592c!important;
+	border-color: #28a745!important;
+	height: auto!important;
+  width: auto!important;
+}
+
+
+/* fin des modifications */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+
